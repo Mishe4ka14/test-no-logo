@@ -1,0 +1,50 @@
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #333, #555);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); // Обрезка фона
+  margin-top: 13%;
+  .content {
+    max-width: 50%;
+
+    h2 {
+      font-size: 36px;
+      color: white;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    .order_btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        padding: 8px 16px;
+      }
+    }
+  }
+
+  .hero_image {
+    max-width: 40%;
+    object-fit: contain;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+  }
+}
