@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './header.module.scss';
 import icon from '../../assets/icons8-телефон-50.png';
+import { Button } from '../button/button';
 
 const Header = () => {
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
@@ -30,7 +31,7 @@ const Header = () => {
         <div className={styles.header_right}>
           <img className={styles.icon_phone} src={icon}/>
           <p className={styles.number}>+7 (495) 926-01-26</p>
-          <button className={styles.order_btn}>Заказать сайт</button>
+          <Button red={false}/>
         </div>
       </div>
       <nav className={styles.links_box}>

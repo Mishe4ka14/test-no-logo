@@ -1,0 +1,29 @@
+.button {
+  padding: 10px 20px;
+  border: 2px rgb(55, 53, 53) solid;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  font-weight: 600;
+
+  &.red {
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: white;
+      color: #ff3366;
+    }
+  }
+
+  &.white {
+    background-color: white;
+    color: #ff3366;
+
+    &:hover {
+      background-color: #ff3366;
+      color: white;
+      border: 2px solid #ff3366;
+    }
+  }
+}

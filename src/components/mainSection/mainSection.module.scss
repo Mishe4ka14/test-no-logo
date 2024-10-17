@@ -1,50 +1,161 @@
-.main {
+.section {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #333, #555);
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); // Обрезка фона
-  margin-top: 13%;
-  .content {
-    max-width: 50%;
-
-    h2 {
-      font-size: 36px;
-      color: white;
-
-      @media (max-width: 768px) {
-        font-size: 24px;
-      }
-    }
-
-    .order_btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ff3366;
-      color: white;
-      border: none;
-      cursor: pointer;
-
-      @media (max-width: 768px) {
-        padding: 8px 16px;
-      }
-    }
-  }
+  max-width: 100%;
 
   .hero_image {
-    max-width: 40%;
+    position: absolute;
+    top: 4%;
+    left: 53%;
+    width: 45%;
+    height: 85%;
     object-fit: contain;
+    margin-left: -5%;
+    z-index: 10;
 
-    @media (max-width: 768px) {
-      max-width: 100%;
+    @media (max-width: 1024px) {
+      top: 5%;
+      left: 45%;
+      height: 80%;
+    }
+
+    @media (max-width: 900px) {
+      top: 18%;
+      left: 45%;
+      height: 50%;
+    }
+
+    @media (max-width: 650px) {
+      width: 20%;
+      left: 55%;
+    }
+
+    @media (max-width: 480px) {
+      display: none;
     }
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
+  .main {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-self: baseline;
+    padding: 10% 20px;
+    background: radial-gradient(circle, #c6daec, #88929d 40%, #626a73 80%);
+    clip-path: polygon(0 0, 100% 15%, 100% 80%, 0 100%);
+    margin-top: 13%;
+    z-index: 10;
+
+    @media (max-width: 650px) {
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 50%;
+      margin-left: 15%;
+      z-index: 1000;
+
+      @media (max-width: 900px) {
+          margin-left: 25%;
+        }
+
+        @media (max-width: 650px) {
+          margin-right: 40%;
+        }
+
+        @media (max-width: 480px) {
+          margin: 0;
+        }
+
+      h2 {
+        line-height: 5vh;
+        z-index: 15;
+        margin: 0;
+        margin-bottom: 2%;
+        padding: 0;
+        .boldWhite {
+          font-size: 50px;
+          font-weight: 600;
+          color: white;
+        }
+
+        .thinWhite {
+          font-size: 50px;
+          font-weight: 100;
+          color: white;
+        }
+
+        .boldGray {
+          font-size: 80px;
+          font-weight: 900;
+          color: #333;
+        }
+
+        @media (max-width: 1024px) {
+          .boldWhite, .thinWhite {
+            font-size: 40px;
+          }
+
+          .boldGray {
+            font-size: 60px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .boldWhite, .thinWhite {
+            font-size: 20px;
+          }
+
+          .boldGray {
+            font-size: 35px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .boldWhite, .thinWhite {
+            font-size: 24px;
+          }
+
+          .boldGray {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .order_btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ff3366;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        @media (max-width: 1024px) {
+          padding: 8px 18px;
+        }
+
+        @media (max-width: 768px) {
+          padding: 8px 16px;
+        }
+
+        @media (max-width: 480px) {
+          padding: 6px 14px;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      padding: 8% 20px;
+      margin-top: 10%;
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 40px 20px 60px;
+      margin-top: 13%;
+    }
   }
 }
