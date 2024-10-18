@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+  # Тестовый лендинг сайт
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект представляет собой тестовое задание - одностраничный лендинг сайт,
+выполненный с использованием **React** и **SCSS**.
+В проекте реализована адаптивная верстка, а также интеграция карты через Yandex Maps API.
 
-Currently, two official plugins are available:
+## Ссылка на сайт
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект выложен на платформе Vercel и доступен по [ссылке](https://test-no-logo.vercel.app/).
 
-## Expanding the ESLint configuration
+## Установка и запуск проекта
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Клонирование репозитория
 
-- Configure the top-level `parserOptions` property like this:
+Сначала клонируйте репозиторий с проектом на свой компьютер:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+```bash
+git clone git@github.com:Mishe4ka14/test-no-logo.git
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Установка зависимостей
+cd test-no-logo
+npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Запуск локального сервера
+Чтобы запустить проект на локальном сервере, выполните команду:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+bash
+Copy code
+npm run dev
+После этого проект будет доступен по адресу http://localhost:3000/ (по умолчанию).
+
+4. Сборка для продакшена
+Чтобы собрать проект для продакшена, выполните:
+
+bash
+Copy code
+npm run build
+Готовый проект будет находиться в директории /dist.
