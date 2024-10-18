@@ -4,7 +4,7 @@ import { Map, Placemark } from '@pbe/react-yandex-maps';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="map-container">
+      <div className={styles.map_container}>
         <Map
           defaultState={{ center: [55.725833, 37.653569], zoom: 15 }}
           className={styles.map}

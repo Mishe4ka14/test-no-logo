@@ -35,10 +35,10 @@ const Header = () => {
         </div>
       </div>
       <nav className={styles.links_box}>
-        <li>компания</li>
-        <li>услуги</li>
-        <li>работы</li>
-        <li>контакты</li>
+        <li className={styles.link}>компания</li>
+        <li className={styles.link}>услуги</li>
+        <li className={styles.link}>работы</li>
+        <li className={styles.link}>контакты</li>
       </nav>
     </header>
   );

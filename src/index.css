@@ -9,24 +9,67 @@
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  -webkit-text-size-adjust: 100%; 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
   max-width: 1440px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox; 
   display: flex;
   justify-content: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
-  } 
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+* {
+  text-decoration-skip-ink: auto;
 }
